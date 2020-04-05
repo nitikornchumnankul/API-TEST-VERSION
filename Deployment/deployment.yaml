@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: hello-version
-          image: nitikornchumnankul/hello-version-test-version:v1 
+          image: nitikornchumnankul/api-test-version:v1 
           ports: 
             - containerPort: 8080
