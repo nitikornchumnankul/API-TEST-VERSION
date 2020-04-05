@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: hello-version
+  labels:
+    app: hello-version
   namespace: test
 spec:
   minReadySeconds: 5
