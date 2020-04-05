@@ -4,6 +4,13 @@ metadata:
   name: hello-version
   namespace: test
 spec:
+  minReadySeconds: 5
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 60
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
   selector:
     matchLabels:
       run: hello-version
@@ -15,5 +22,8 @@ spec:
       containers:
         - name: hello-version
           image: nitikornchumnankul/api-test-version:v1 
+          imagePullPolicy: IfNotPresent
           ports: 
-            - containerPort: 8080
+            - name: http
+              containerPort: 8080
+              protocol: TCP
