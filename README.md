@@ -3,7 +3,7 @@
 # applied 
  - [x]  deployment.apps/podinfo
  - [x] horizontalpodautoscaler.autoscaling/podinfo
- - [ ]  canary.flagger.app/podinfo
+ - [x] canary.flagger.app/podinfo
 
 # generated 
  - [ ]  deployment.apps/podinfo-primary
