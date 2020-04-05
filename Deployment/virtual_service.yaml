@@ -1,0 +1,14 @@
+hello-versionVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+    name: nginx
+    namespace: istio-system
+spec:
+    hosts:
+      - "hello-version.kongtelalug.com"
+    gateways:
+      - public-gateway.istio-system.svc.cluster.local
+    http:
+      - route:
+           - destination:
+                 host: hello-version

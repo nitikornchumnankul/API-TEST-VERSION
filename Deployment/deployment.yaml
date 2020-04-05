@@ -1,0 +1,19 @@
+hello-versionVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: hello-version
+  namespace: istio-system
+spec:
+  selector:
+    matchLabels:
+      run: hello-version
+  template:
+    metadata:
+      labels:
+        run: hello-version
+    spec:
+      containers:
+        - name: hello-version
+          image: nitikornchumnankul/hello-version-test-version:v1 
+          ports: 
+            - containerPort: 8080
