@@ -2,7 +2,7 @@ hello-versionVersion: v1
 kind: Service
 metadata:
   name: hello-version
-  namespace: istio-system
+  namespace: test
 spec:
   ports:
     - protocol: TCP

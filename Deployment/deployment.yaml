@@ -2,7 +2,7 @@ hello-versionVersion: apps/v1
 kind: Deployment
 metadata: 
   name: hello-version
-  namespace: istio-system
+  namespace: test
 spec:
   selector:
     matchLabels:
