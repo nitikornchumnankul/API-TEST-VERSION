@@ -26,7 +26,17 @@ app.get('/test',(req,res)=>{
 })
 
 app.post('/test',async(req,res)=>{
-    res.status(201).json(req.body);
+    res.status(201).json(
+        {
+            "name": "hello-version",
+            "namespace": "test",
+            "phase": "Progressing", 
+            "metadata": {
+                "test":  "all",
+                "token":  "16688eb5e9f289f1991c"
+            }
+        }
+    );
 })
 
 app.listen(PORT,HOST);
