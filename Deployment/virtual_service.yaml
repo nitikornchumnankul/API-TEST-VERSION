@@ -5,10 +5,10 @@ metadata:
     namespace: test
 spec:
     hosts:
-      - "hello-version.kongtelalug.test"
+      - "hello-version.kongtelalug.com"
     gateways:
-      - public-gateway.test.svc.cluster.local
+      - public-gateway.istio-system.svc.cluster.local
     http:
       - route:
            - destination:
-                 host: hello-version
+                 host:  hello-version-canary
