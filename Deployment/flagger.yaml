@@ -67,5 +67,5 @@ spec:
       - name: load-test
         url: http://flagger-loadtester.test/
         timeout: 5s
-        metadata:
-          cmd: "hey -z 1m -q 10 -c 2 http://hello-version.test:8080/test"
+        metadata: 
+        cmd: "hey -z 1m -q 10 -c 2 http://hello-version-canary.test:8080/test"

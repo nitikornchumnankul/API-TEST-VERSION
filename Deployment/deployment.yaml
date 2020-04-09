@@ -3,6 +3,8 @@ kind: Deployment
 metadata: 
   name: hello-version
   namespace: test
+  labels:
+     app: hello-version
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 5
@@ -13,15 +15,18 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      run: hello-version
+      app: hello-version
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9797"
       labels:
-        run: hello-version
+        app: hello-version
     spec:
       containers:
         - name: hello-version
-          image: nitikornchumnankul/api-test-version:v1 
+          image: nitikornchumnankul/api-test-version:v3.1 
           imagePullPolicy: IfNotPresent
           ports: 
             - name: http
