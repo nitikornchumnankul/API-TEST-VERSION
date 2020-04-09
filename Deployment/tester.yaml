@@ -37,7 +37,7 @@ spec:
                 - --tries=1
                 - --timeout=4
                 - --spider
-                - http://localhost:8080/test
+                - http://localhost:8080/healthz
             timeoutSeconds: 5
           resources:
             limits:
