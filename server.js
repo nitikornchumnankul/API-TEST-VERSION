@@ -22,7 +22,17 @@ app.get('/',(req,res)=> {
     res.send('<h1 style="text-align:center"> Hello Version 1 </h1>')
 })
 app.get('/test',(req,res)=>{
-    res.json(req.body);
+    res.status(200).json(
+        {
+            "name": "hello-version",
+            "namespace": "test",
+            "phase": "Progressing", 
+            "metadata": {
+                "test":  "all",
+                "token":  "16688eb5e9f289f1991c"
+            }
+        }
+    );
 })
 
 app.post('/test',async(req,res)=>{
