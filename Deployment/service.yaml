@@ -4,10 +4,13 @@ metadata:
   name: hello-version
   namespace: test
 spec:
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
   type: ClusterIP
   selector:
-    run: hello-version
+    app: hello-version
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: http
+  
+

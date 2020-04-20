@@ -28,7 +28,7 @@ app.get('/test',(req,res)=>{
 app.post('/test',async(req,res)=>{
     res.status(201).json(req.body);
 })
-/healthz
+
 app.get('/healthz',async(req,res)=>{
     res.status(200).json({
         "status":"OK"
